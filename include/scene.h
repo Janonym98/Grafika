@@ -8,7 +8,7 @@
 
 typedef struct Scene
 {
-    Model cube;
+    Model ground;
     Material material;
     GLuint texture_id;
 } Scene;

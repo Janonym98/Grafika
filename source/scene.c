@@ -7,21 +7,21 @@
 
 void init_scene(Scene* scene)
 {
-    load_model(&(scene->cube), "ground3.obj");
-    scene->texture_id = load_texture("cube.png"); 
+    load_model(&(scene->ground), "ground.obj");
+    scene->texture_id = load_texture("ground.png"); 
 
     glBindTexture(GL_TEXTURE_2D, scene->texture_id);
 
     scene->material.ambient.red = 1.0;
     scene->material.ambient.green = 1.0;
-    scene->material.ambient.blue = 1.0;
+    scene->material.ambient.blue = 0.0;
 
     scene->material.diffuse.red = 1.0;
-    scene->material.diffuse.green = 1.0;
+    scene->material.diffuse.green = 0.5;
     scene->material.diffuse.blue = 1.0;
 
     scene->material.specular.red = 1.0;
-    scene->material.specular.green = 0.0;
+    scene->material.specular.green = 0.5;
     scene->material.specular.blue = 1.0;
 
     scene->material.shininess = 1.0;
@@ -31,7 +31,7 @@ void set_lighting()
 {
     float ambient_light[] = { 0.2f, 0.2f, 0.2f, 1.0f };
     float diffuse_light[] = { 0.9f, 0.9f, 0.9, 1.0f };
-    float specular_light[] = { 1.0f, 0.0f, 1.0f, 1.0f };
+    float specular_light[] = { 1.0f, 1.0f, 1.0f, 1.0f };
     float position[] = { 0.0f, 0.0f, 10.0f, 1.0f };
 
     glLightfv(GL_LIGHT0, GL_AMBIENT, ambient_light);
@@ -72,7 +72,7 @@ void draw_scene(const Scene* scene)
     set_material(&(scene->material));
     set_lighting();
     draw_origin();
-    draw_model(&(scene->cube));
+    draw_model(&(scene->ground));
 }
 
 void draw_origin()

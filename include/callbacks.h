@@ -3,6 +3,8 @@
 
 #include "camera.h"
 #include "scene.h"
+#include "balloon.h"
+
 
 #include <GL/glut.h>
 
@@ -10,6 +12,11 @@
  * Scene
  */
 Scene scene;
+
+/**
+ * Scene2 (balloon)
+ */
+Sceneb sceneb;
 
 /**
  * Camera

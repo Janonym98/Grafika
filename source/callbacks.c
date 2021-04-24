@@ -1,6 +1,6 @@
 #include "callbacks.h"
 
-#define VIEWPORT_RATIO (4.0 / 3.0)
+#define VIEWPORT_RATIO (16.0 / 9.0)
 #define VIEWPORT_ASPECT 50.0
 
 struct {
