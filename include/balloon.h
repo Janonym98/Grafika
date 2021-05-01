@@ -10,7 +10,7 @@ typedef struct Sceneb
 {
     Model balloon;
     Material materialb;
-    GLuint texture_idb;
+    GLuint balloon_texture_id;
 } Sceneb;
 
 /**

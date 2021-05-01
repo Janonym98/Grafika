@@ -7,10 +7,10 @@
 
 void init_scene(Scene* scene)
 {
-    load_model(&(scene->ground), "ground.obj");
-    scene->texture_id = load_texture("ground.png"); 
+    load_model(&(scene->ground), "obj/ground.obj");
+    scene->ground_texture_id = load_texture("tex/ground.png"); 
 
-    glBindTexture(GL_TEXTURE_2D, scene->texture_id);
+    glBindTexture(GL_TEXTURE_2D, scene->ground_texture_id);
 
     scene->material.ambient.red = 1.0;
     scene->material.ambient.green = 1.0;
@@ -73,6 +73,7 @@ void draw_scene(const Scene* scene)
     set_lighting();
     draw_origin();
     draw_model(&(scene->ground));
+    glBindTexture(GL_TEXTURE_2D, scene->ground_texture_id);
 }
 
 void draw_origin()

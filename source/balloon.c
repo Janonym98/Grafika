@@ -7,10 +7,10 @@
 
 void init_sceneb(Sceneb* sceneb)
 {
-    load_model(&(sceneb->balloon), "balloon.obj");
-    sceneb->texture_idb = load_texture("cube.png"); 
+    load_model(&(sceneb->balloon), "obj/balloon.obj");
+    sceneb->balloon_texture_id = load_texture("tex/balloon.jpg"); 
 
-    glBindTexture(GL_TEXTURE_2D, sceneb->texture_idb);
+    glBindTexture(GL_TEXTURE_2D, sceneb->balloon_texture_id);
 
     sceneb->materialb.ambient.red = 1.0;
     sceneb->materialb.ambient.green = 1.0;
@@ -72,4 +72,5 @@ void draw_sceneb(const Sceneb* sceneb)
     set_materialb(&(sceneb->materialb));
     set_lightingb();
     draw_model(&(sceneb->balloon));
+    glBindTexture(GL_TEXTURE_2D, sceneb->balloon_texture_id);
 }
