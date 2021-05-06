@@ -12,6 +12,7 @@ Sárga lufik megfogása/elengedése: F
 Sárga lufik forgatása: Q, E
 Fényerő növelése/csökkentése: +/-
 Játékból való kilépés: ESC
+Kamera mozgatás: egér gomb lenyomása és egér mozgatása
 Szekrényben lévő tárgy megfogása/elengedése: H
 (Talán jumpscare?)
 
