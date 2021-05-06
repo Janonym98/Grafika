@@ -11,5 +11,7 @@ Mozgás le: C
 Sárga lufik megfogása/elengedése: F
 Sárga lufik forgatása: Q, E
 Fényerő növelése/csökkentése: +/-
+Játékból való kilépés: ESC
 Szekrényben lévő tárgy megfogása/elengedése: H
 (Talán jumpscare?)
+
