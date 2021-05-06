@@ -16,3 +16,5 @@ Kamera mozgatás: egér gomb lenyomása és egér mozgatása
 Szekrényben lévő tárgy megfogása/elengedése: H
 (Talán jumpscare?)
 
+
+A program futtatásához le kell tölteni a repositorym teljes tartalmát, majd a konzolba a következőt kell írni: make && demon
