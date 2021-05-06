@@ -1,5 +1,5 @@
 all:
-	gcc -Iinclude/ source/balloon.c source/callbacks.c source/camera.c source/init.c source/main.c source/scene.c source/texture.c source/utils.c -lSOIL -lobj -lopengl32 -lglu32 -lglut32 -lm -o game.exe -Wall -Wextra -Wpedantic
-
+	gcc -ogame.exe -Iinclude/ src/* -lobj -lSOIL -lopengl32 -lglu32 -lglut32 -lm -std=c99
+	
 linux:
-	# gcc -Iinclude/ source/balloon.c source/callbacks.c source/camera.c source/init.c source/main.c source/scene.c source/texture.c source/utils.c -lSOIL -lobj -lGL -lGLU -lglut -lm -o game -Wall -Wextra -Wpedantic
+	gcc -ogame -Iinclude/ src/* -lobj -lSOIL -lGL -lGLU -lglut -lm -std=c99
