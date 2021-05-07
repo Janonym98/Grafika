@@ -78,9 +78,9 @@ void init_entities(World* world) {
 
 
 	// Monster
-	load_model(&world->monster[0].model, "obj/balloon.obj");
-	world->monster[0].texture = load_texture("tex/face3.png");
-	init_object(&world->monster[0], 0, -250, 75);
+	load_model(&world->monster[0].model, "obj/pumpkin.obj");
+	world->monster[0].texture = load_texture("tex/pumpkin2.png");
+	init_object(&world->monster[0], 0, -250, 85);
 	world->monster[0].rotation = 0.0f;
 
 	// Monster2

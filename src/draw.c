@@ -107,7 +107,6 @@ void draw_content(World* world)
 		glScalef(10.0f, 10.0f, 10.0f);
 		glRotatef(world->monster[0].rotation, 0, 1, 0);
 
-		glRotatef(world->rota, 0, -1, 0);
 
 		draw_model(&world->monster[0].model);
     glPopMatrix();
@@ -246,7 +245,8 @@ void draw_content(World* world)
 	{
 		world->monster[move_monster_id].position.x = camera.position.x;
 		world->monster[move_monster_id].position.z = camera.position.z;
-		world->monster[move_monster_id].rotation= -mouse_x;
+		world->monster[move_monster_id].position.y = camera.position.y-15;
+		world->monster[move_monster_id].rotation = -mouse_x;
 	}
 }
 
