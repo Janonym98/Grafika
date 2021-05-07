@@ -8,7 +8,7 @@
 #include <GL/glut.h>
 
 int move_balloon_id;
-int move_monster_id;
+int move_mask_id;
 int mouse_x, mouse_y;
 struct Camera camera;
 

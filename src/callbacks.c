@@ -128,13 +128,13 @@ void keyboardUp(unsigned char key, int x, int y)
 		break;
 	case 'h':
 	case 'H':
-		if (move_monster_id == -1)
+		if (move_mask_id == -1)
 		{
-			grab_closest_monster(&world, camera.position);
+			grab_closest_mask(&world, camera.position);
 		}
 		else
 		{
-			move_monster_id = -1;
+			move_mask_id = -1;
 		}
 		break;
 	case 'f':
@@ -279,27 +279,27 @@ void update_camera_position(struct Camera *camera, double elapsed_time)
 
 
 
-void grab_closest_monster(World *world, Vertex camera_position)
+void grab_closest_mask(World *world, Vertex camera_position)
 {
-	int monster_id;
+	int mask_id;
 	float min_distance = MAX_MOVING_DISTANCE;
 	int i;
 
-	for (i = 0; i < MONSTER_LENGTH; i++)
+	for (i = 0; i < MASK_LENGTH; i++)
 	{
-		float distance = sqrt(pow((camera_position.x - world->monster[i].position.x), 2) + 
-		pow((camera_position.z - world->monster[i].position.z), 2));
+		float distance = sqrt(pow((camera_position.x - world->mask[i].position.x), 2) + 
+		pow((camera_position.z - world->mask[i].position.z), 2));
 
 		if (min_distance > distance)
 		{
 			min_distance = distance;
-			monster_id = i;
+			mask_id = i;
 		}
 	}
 
 	if (min_distance < MAX_MOVING_DISTANCE)
 	{
-		move_monster_id = monster_id;
+		move_mask_id = mask_id;
 	}
 }
 

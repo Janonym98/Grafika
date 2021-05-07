@@ -96,33 +96,33 @@ void draw_content(World* world)
 		draw_model(&world->balloon[3].model);
     glPopMatrix();
 
-//monster 1	
+//Mask 1	
 
 	glPushMatrix();
-		glTranslatef(world->monster[0].position.x, world->monster[0].position.y, world->monster[0].position.z);
+		glTranslatef(world->mask[0].position.x, world->mask[0].position.y, world->mask[0].position.z);
 
-		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->monster[0].material_ambient);
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->mask[0].material_ambient);
 
-		glBindTexture(GL_TEXTURE_2D, world->monster[0].texture);
+		glBindTexture(GL_TEXTURE_2D, world->mask[0].texture);
 		glScalef(10.0f, 10.0f, 10.0f);
-		glRotatef(world->monster[0].rotation, 0, 1, 0);
+		glRotatef(world->mask[0].rotation, 0, 1, 0);
 
 
-		draw_model(&world->monster[0].model);
+		draw_model(&world->mask[0].model);
     glPopMatrix();
 
-//monster 2	
+//Mask 2	
 
 	glPushMatrix();
-		glTranslatef(world->monster[1].position.x, world->monster[1].position.y, world->monster[1].position.z);
+		glTranslatef(world->mask[1].position.x, world->mask[1].position.y, world->mask[1].position.z);
 
-		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->monster[1].material_ambient);
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->mask[1].material_ambient);
 
-		glBindTexture(GL_TEXTURE_2D, world->monster[1].texture);
+		glBindTexture(GL_TEXTURE_2D, world->mask[1].texture);
 		glScalef(10.0f, 10.0f, 10.0f);
-		glRotatef(world->monster[1].rotation, 0, 1, 0);
+		glRotatef(world->mask[1].rotation, 0, 1, 0);
 
-		draw_model(&world->monster[1].model);
+		draw_model(&world->mask[1].model);
     glPopMatrix();
 
 //campfire	
@@ -241,12 +241,12 @@ void draw_content(World* world)
 		world->balloon[move_balloon_id].position.z = camera.position.z+20;
 	}
 
-	if (move_monster_id != -1)
+	if (move_mask_id != -1)
 	{
-		world->monster[move_monster_id].position.x = camera.position.x;
-		world->monster[move_monster_id].position.z = camera.position.z;
-		world->monster[move_monster_id].position.y = camera.position.y-15;
-		world->monster[move_monster_id].rotation = -mouse_x;
+		world->mask[move_mask_id].position.x = camera.position.x;
+		world->mask[move_mask_id].position.z = camera.position.z;
+		world->mask[move_mask_id].position.y = camera.position.y-15;
+		world->mask[move_mask_id].rotation = -mouse_x;
 	}
 }
 

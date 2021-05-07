@@ -49,7 +49,7 @@ GLuint load_texture(const char* filename) {
 
 void init_entities(World* world) {
 	move_balloon_id = -1;
-	move_monster_id = -1;
+	move_mask_id = -1;
 
 
 	// Balloon
@@ -77,17 +77,17 @@ void init_entities(World* world) {
 	world->balloon[3].rotation = -135.0f;
 
 
-	// Monster
-	load_model(&world->monster[0].model, "obj/pumpkin.obj");
-	world->monster[0].texture = load_texture("tex/pumpkin2.png");
-	init_object(&world->monster[0], 0, -250, 85);
-	world->monster[0].rotation = 0.0f;
+	// Mask
+	load_model(&world->mask[0].model, "obj/pumpkin.obj");
+	world->mask[0].texture = load_texture("tex/pumpkin2.png");
+	init_object(&world->mask[0], 0, -250, 85);
+	world->mask[0].rotation = 0.0f;
 
-	// Monster2
-	load_model(&world->monster[1].model, "obj/pumpkin.obj");
-	world->monster[1].texture = load_texture("tex/pumpkin.png");
-	init_object(&world->monster[1], -60, -250, 85);
-	world->monster[1].rotation = 270.0f;
+	// Mask2
+	load_model(&world->mask[1].model, "obj/pumpkin.obj");
+	world->mask[1].texture = load_texture("tex/pumpkin.png");
+	init_object(&world->mask[1], -60, -250, 85);
+	world->mask[1].rotation = 270.0f;
 
 	// Fire
 

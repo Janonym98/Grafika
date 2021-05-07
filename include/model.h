@@ -11,7 +11,7 @@
 #define FALSE 0
 
 #define BALLOON_LENGTH 4
-#define MONSTER_LENGTH 2
+#define MASK_LENGTH 2
 #define WINDOW_LENGTH 2
 
 typedef GLubyte Pixel[3];
@@ -39,7 +39,7 @@ typedef struct {
     Object fan;
     Object window[WINDOW_LENGTH];
     Object balloon[BALLOON_LENGTH];
-    Object monster[MONSTER_LENGTH];
+    Object mask[MASK_LENGTH];
     float rota;
 }World;
 
