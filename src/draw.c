@@ -142,6 +142,25 @@ void draw_content(World* world)
 //Star	
 
 	glPushMatrix();
+		
+		glRotatef(world->rota, 0, 0, 1);
+
+		glTranslatef(world->star.position.x, world->star.position.y, world->star.position.z);
+
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->star.material_ambient);
+
+		glBindTexture(GL_TEXTURE_2D, world->star.texture);
+		
+		glScalef(5.0f, 5.0f, 5.0f);
+		
+
+		draw_model(&world->star.model);
+    glPopMatrix();
+
+//Star2	
+
+	glPushMatrix();
+		
 		glRotatef(world->rota, 1, 0, 0);
 
 		glTranslatef(world->star.position.x, world->star.position.y, world->star.position.z);
@@ -156,7 +175,178 @@ void draw_content(World* world)
 		draw_model(&world->star.model);
     glPopMatrix();
 
-//Star	
+//Star3
+	glPushMatrix();
+		
+		glRotatef(world->rota, 1, 0, 1);
+
+		glTranslatef(world->star.position.x, world->star.position.y, world->star.position.z);
+
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->star.material_ambient);
+
+		glBindTexture(GL_TEXTURE_2D, world->star.texture);
+		
+		glScalef(5.0f, 5.0f, 5.0f);
+
+		draw_model(&world->star.model);
+    glPopMatrix();
+
+//Star4
+	glPushMatrix();
+		
+		glRotatef(world->rota, 1, 1, 0);
+
+		glTranslatef(world->star.position.x, world->star.position.y, world->star.position.z);
+
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->star.material_ambient);
+
+		glBindTexture(GL_TEXTURE_2D, world->star.texture);
+		
+		glScalef(5.0f, 5.0f, 5.0f);
+
+		draw_model(&world->star.model);
+    glPopMatrix();
+
+
+//Star5
+	glPushMatrix();
+		
+		glRotatef(world->rota, 0, 1, 1);
+
+		glTranslatef(world->star.position.x, world->star.position.y, world->star.position.z);
+
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->star.material_ambient);
+
+		glBindTexture(GL_TEXTURE_2D, world->star.texture);
+		
+		glScalef(5.0f, 5.0f, 5.0f);
+
+		draw_model(&world->star.model);
+    glPopMatrix();
+
+//Star6	
+
+	glPushMatrix();
+		
+		glRotatef(world->rota, 1, 1, 1);
+
+		glTranslatef(world->star.position.x, world->star.position.y, world->star.position.z);
+
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->star.material_ambient);
+
+		glBindTexture(GL_TEXTURE_2D, world->star.texture);
+		
+		glScalef(5.0f, 5.0f, 5.0f);
+		
+
+		draw_model(&world->star.model);
+    glPopMatrix();
+
+//Star7
+
+	glPushMatrix();
+		
+		glRotatef(world->rota, 0, 0, -1);
+
+		glTranslatef(world->star.position.x, world->star.position.y, world->star.position.z);
+
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->star.material_ambient);
+
+		glBindTexture(GL_TEXTURE_2D, world->star.texture);
+		
+		glScalef(5.0f, 5.0f, 5.0f);
+		
+
+		draw_model(&world->star.model);
+    glPopMatrix();
+
+//Star8	
+
+	glPushMatrix();
+		
+		glRotatef(world->rota, -1, 0, 0);
+
+		glTranslatef(world->star.position.x, world->star.position.y, world->star.position.z);
+
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->star.material_ambient);
+
+		glBindTexture(GL_TEXTURE_2D, world->star.texture);
+		
+		glScalef(5.0f, 5.0f, 5.0f);
+		
+
+		draw_model(&world->star.model);
+    glPopMatrix();
+
+//Star9
+	glPushMatrix();
+		
+		glRotatef(world->rota, -1, 0, -1);
+
+		glTranslatef(world->star.position.x, world->star.position.y, world->star.position.z);
+
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->star.material_ambient);
+
+		glBindTexture(GL_TEXTURE_2D, world->star.texture);
+		
+		glScalef(5.0f, 5.0f, 5.0f);
+
+		draw_model(&world->star.model);
+    glPopMatrix();
+
+//Star10
+	glPushMatrix();
+		
+		glRotatef(world->rota, -1, -1, 0);
+
+		glTranslatef(world->star.position.x, world->star.position.y, world->star.position.z);
+
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->star.material_ambient);
+
+		glBindTexture(GL_TEXTURE_2D, world->star.texture);
+		
+		glScalef(5.0f, 5.0f, 5.0f);
+
+		draw_model(&world->star.model);
+    glPopMatrix();
+
+
+
+//Star11
+	glPushMatrix();
+		
+		glRotatef(world->rota, 0, -1, -1);
+
+		glTranslatef(world->star.position.x, world->star.position.y, world->star.position.z);
+
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->star.material_ambient);
+
+		glBindTexture(GL_TEXTURE_2D, world->star.texture);
+		
+		glScalef(5.0f, 5.0f, 5.0f);
+
+		draw_model(&world->star.model);
+    glPopMatrix();
+
+//Star12	
+
+	glPushMatrix();
+		
+		glRotatef(world->rota, -1, -1, -1);
+
+		glTranslatef(world->star.position.x, world->star.position.y, world->star.position.z);
+
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->star.material_ambient);
+
+		glBindTexture(GL_TEXTURE_2D, world->star.texture);
+		
+		glScalef(5.0f, 5.0f, 5.0f);
+		
+
+		draw_model(&world->star.model);
+    glPopMatrix();
+
+//Fan	
 
 	glPushMatrix();
 		
