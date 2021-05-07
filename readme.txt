@@ -17,5 +17,6 @@ Szekrényben lévő tárgy megfogása/elengedése: H
 (Talán jumpscare?)
 
 Jelen pillanatban eljuttam odáig, hogy beleraktam egy tököt, amit maszkként fel lehet venni... maszkkal a "fejünkön" való mozgás nagyjából megoldottam de elég bugos még (először kattingatni kell a képernyőn hogy jól be legyen pozícionálva, ha megvan a pozíció, akkor abból a pozícióból kell lenyomva tartani az egeret és ilyenkor a tök a kamerával megfelelően mozog, mint egy rendes maszk.... mármint az x tengelyen (jelenleg). Megproóbálom megoldani a rendes maszkviselést, viszont nem ígérek semmit.
+Annyit még finomítottam rajta, hogy ha fel vagy le mozgok akkor szintén követi a tök a mozgást.
 
 A program futtatásához le kell tölteni a repositorym teljes tartalmát, majd a konzolba a következőt kell írni: make && demon
