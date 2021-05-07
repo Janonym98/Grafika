@@ -12,6 +12,7 @@
 
 #define BALLOON_LENGTH 4
 #define MONSTER_LENGTH 2
+#define WINDOW_LENGTH 2
 
 typedef GLubyte Pixel[3];
 
@@ -35,8 +36,8 @@ typedef struct {
     Object wardrobe;
     Object devil;
     Object star;
-    Object window;
-    Object window2;
+    Object fan;
+    Object window[WINDOW_LENGTH];
     Object balloon[BALLOON_LENGTH];
     Object monster[MONSTER_LENGTH];
     float rota;
@@ -52,7 +53,7 @@ GLuint load_texture(const char* filename);
 // Initialize my entities
 void init_entities(World* world);
 
-// Initialize my assigned entities
+// Update my assigned entities
 void update_entities(World* world, double time);
 
 #endif // MODEL_H

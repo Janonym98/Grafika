@@ -55,25 +55,25 @@ void init_entities(World* world) {
 	// Balloon
 	load_model(&world->balloon[0].model, "obj/balloon.obj");
 	world->balloon[0].texture = load_texture("tex/face2.png");
-	init_object(&world->balloon[0], 260, -260, 100);
+	init_object(&world->balloon[0], 100, -100, 100);
 	world->balloon[0].rotation = 45.0f;
 
 	// Balloon
 	world->balloon[1].model = world->balloon[0].model;
 	world->balloon[1].texture = world->balloon[0].texture;
-	init_object(&world->balloon[1], 260, 260, 100);
+	init_object(&world->balloon[1], 100, 100, 100);
 	world->balloon[1].rotation = -45.f;
 
 	// Balloon
 	world->balloon[2].model = world->balloon[0].model;
 	world->balloon[2].texture = world->balloon[0].texture;
-	init_object(&world->balloon[2], -260, -260, 100);
+	init_object(&world->balloon[2], -100, -100, 100);
 	world->balloon[2].rotation = 135.0f;
 
 	// Balloon
 	world->balloon[3].model = world->balloon[0].model;
 	world->balloon[3].texture = world->balloon[0].texture;
-	init_object(&world->balloon[3], -260, 260, 100);
+	init_object(&world->balloon[3], -100, 100, 100);
 	world->balloon[3].rotation = -135.0f;
 
 
@@ -94,12 +94,19 @@ void init_entities(World* world) {
 	load_model(&world->fire.model, "obj/fire.obj");
 	world->fire.texture = load_texture("tex//fire2.jpg");
 	init_object(&world->fire, 0, 0, 25);
+	
 
 	// Star
 
 	load_model(&world->star.model, "obj/star.obj");
 	world->star.texture = load_texture("tex//star.png");
 	init_object(&world->star, 0, 0, 110);
+
+	// Fan
+
+	load_model(&world->fan.model, "obj/fan.obj");
+	world->fan.texture = load_texture("tex//fan.png");
+	init_object(&world->fan, 0, 0, 100);
 
 	// Schrank
 	load_model(&world->wardrobe.model, "obj/wardrobe.obj");
@@ -114,14 +121,14 @@ void init_entities(World* world) {
 
 
 	// Window
-	load_model(&world->window.model, "obj/window.obj");
-	world->window.texture =  load_texture("tex//devil.jpg");
-	init_object(&world->window, 300, -3, 80);
+	load_model(&world->window[0].model, "obj/window.obj");
+	world->window[0].texture =  load_texture("tex//devil.jpg");
+	init_object(&world->window[0], 300, -3, 80);
 
 	// Window2
-	load_model(&world->window2.model, "obj/window.obj");
-	world->window.texture =  load_texture("tex//devil.jpg");
-	init_object(&world->window2, -300, 3, 80);
+	load_model(&world->window[1].model, "obj/window.obj");
+	world->window[1].texture =  load_texture("tex//devil.jpg");
+	init_object(&world->window[1], -300, 3, 80);
 
 	// Door
 	load_model(&world->door.model, "obj/door.obj");

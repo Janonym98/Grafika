@@ -119,7 +119,7 @@ void keyboardUp(unsigned char key, int x, int y)
 	case 'h':
 		if (move_monster_id == -1)
 		{
-			search_closest_monster(&world, camera.position);
+			grab_closest_monster(&world, camera.position);
 		}
 		else
 		{
@@ -129,7 +129,7 @@ void keyboardUp(unsigned char key, int x, int y)
 	case 'f':
 		if (move_balloon_id == -1)
 		{
-			search_closest_balloon(&world, camera.position);
+			grab_closest_balloon(&world, camera.position);
 		}
 		else
 		{
@@ -263,7 +263,9 @@ void update_camera_position(struct Camera *camera, double elapsed_time)
 	}
 }
 
-void search_closest_monster(World *world, Vertex camera_position)
+
+
+void grab_closest_monster(World *world, Vertex camera_position)
 {
 	int monster_id;
 	float min_distance = MAX_MOVING_DISTANCE;
@@ -272,7 +274,7 @@ void search_closest_monster(World *world, Vertex camera_position)
 	for (i = 0; i < MONSTER_LENGTH; i++)
 	{
 		float distance = sqrt(pow((camera_position.x - world->monster[i].position.x), 2) + 
-		((camera_position.z - world->monster[i].position.z), 2));
+		pow((camera_position.z - world->monster[i].position.z), 2));
 
 		if (min_distance > distance)
 		{
@@ -287,7 +289,7 @@ void search_closest_monster(World *world, Vertex camera_position)
 	}
 }
 
-void search_closest_balloon(World *world, Vertex camera_position)
+void grab_closest_balloon(World *world, Vertex camera_position)
 {
 	int balloon_id;
 	float min_distance = MAX_MOVING_DISTANCE;
@@ -296,7 +298,7 @@ void search_closest_balloon(World *world, Vertex camera_position)
 	for (i = 0; i < BALLOON_LENGTH; i++)
 	{
 		float distance = sqrt(pow((camera_position.x - world->balloon[i].position.x), 2) + 
-		((camera_position.z - world->balloon[i].position.z), 2));
+		pow((camera_position.z - world->balloon[i].position.z), 2));
 
 		if (min_distance > distance)
 		{

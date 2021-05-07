@@ -158,6 +158,23 @@ void draw_content(World* world)
 		draw_model(&world->star.model);
     glPopMatrix();
 
+//Star	
+
+	glPushMatrix();
+		
+
+		glTranslatef(world->fan.position.x, world->fan.position.y, world->fan.position.z);
+
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->fan.material_ambient);
+
+		glBindTexture(GL_TEXTURE_2D, world->fan.texture);
+		
+		glScalef(5.0f, 5.0f, 5.0f);
+		glRotatef(world->rota, 0, 1, 0);
+
+		draw_model(&world->fan.model);
+    glPopMatrix();
+
 //Schrank	
 
 	glPushMatrix();
@@ -193,26 +210,26 @@ void draw_content(World* world)
 //window
 
 	glPushMatrix();
-		glTranslatef(world->window.position.x, world->window.position.y, world->window.position.z);
+		glTranslatef(world->window[0].position.x, world->window[0].position.y, world->window[0].position.z);
 		glRotatef(180, 0, 1, 0);
-		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->window.material_ambient);
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->window[0].material_ambient);
 
-		glBindTexture(GL_TEXTURE_2D, world->window.texture);
+		glBindTexture(GL_TEXTURE_2D, world->window[0].texture);
 		glScalef(15.0f, 15.0f, 15.0f);
 
-		draw_model(&world->window.model);
+		draw_model(&world->window[0].model);
     glPopMatrix();
 
 //window2
 	glPushMatrix();
-		glTranslatef(world->window2.position.x, world->window2.position.y, world->window2.position.z);
+		glTranslatef(world->window[1].position.x, world->window[1].position.y, world->window[1].position.z);
 		glRotatef(0, 0, 1, 0);
-		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->window2.material_ambient);
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->window[1].material_ambient);
 
-		glBindTexture(GL_TEXTURE_2D, world->window.texture);
+		glBindTexture(GL_TEXTURE_2D, world->window[1].texture);
 		glScalef(15.0f, 15.0f, 15.0f);
 
-		draw_model(&world->window2.model);
+		draw_model(&world->window[1].model);
     glPopMatrix();
 
     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, material_ambient_default);

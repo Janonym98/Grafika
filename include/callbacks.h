@@ -3,7 +3,7 @@
 
 #include "camera.h"
 
-#define MAX_MOVING_DISTANCE 60.0f
+#define MAX_MOVING_DISTANCE 90.0f
 
 #include <GL/glut.h>
 
