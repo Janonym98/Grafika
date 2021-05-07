@@ -34,6 +34,7 @@ typedef struct {
     Object fire;
     Object wardrobe;
     Object devil;
+    Object star;
     Object window;
     Object window2;
     Object balloon[BALLOON_LENGTH];

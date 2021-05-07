@@ -95,6 +95,12 @@ void init_entities(World* world) {
 	world->fire.texture = load_texture("tex//fire2.jpg");
 	init_object(&world->fire, 0, 0, 25);
 
+	// Star
+
+	load_model(&world->star.model, "obj/star.obj");
+	world->star.texture = load_texture("tex//star.png");
+	init_object(&world->star, 0, 0, 110);
+
 	// Schrank
 	load_model(&world->wardrobe.model, "obj/wardrobe.obj");
 	world->wardrobe.texture = load_texture("tex//wardrobe.png");

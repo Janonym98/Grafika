@@ -141,6 +141,23 @@ void draw_content(World* world)
 		draw_model(&world->fire.model);
     glPopMatrix();
 
+//Star	
+
+	glPushMatrix();
+		glRotatef(world->rota, 1, 0, 0);
+
+		glTranslatef(world->star.position.x, world->star.position.y, world->star.position.z);
+
+		glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, world->star.material_ambient);
+
+		glBindTexture(GL_TEXTURE_2D, world->star.texture);
+		
+		glScalef(5.0f, 5.0f, 5.0f);
+		
+
+		draw_model(&world->star.model);
+    glPopMatrix();
+
 //Schrank	
 
 	glPushMatrix();
