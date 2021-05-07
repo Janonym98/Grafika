@@ -1,7 +1,7 @@
 #include "draw.h"
 #include "model.h"
 #include "callbacks.h"
-
+#include "camera.h"
 #include <GL/glut.h>
 
 #include <obj/load.h>
@@ -122,7 +122,6 @@ void draw_content(World* world)
 		glBindTexture(GL_TEXTURE_2D, world->monster[1].texture);
 		glScalef(10.0f, 10.0f, 10.0f);
 		glRotatef(world->monster[1].rotation, 0, 1, 0);
-		glRotatef(world->rota, 0, -1, 0);
 
 		draw_model(&world->monster[1].model);
     glPopMatrix();
@@ -247,6 +246,7 @@ void draw_content(World* world)
 	{
 		world->monster[move_monster_id].position.x = camera.position.x;
 		world->monster[move_monster_id].position.z = camera.position.z;
+		world->monster[move_monster_id].rotation= -mouse_x;
 	}
 }
 

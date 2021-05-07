@@ -37,11 +37,4 @@ void draw_help(int texture);
 // Draws the door
 void draw_door(int moveX, int moveZ,int degree);
 
-// Draws the balloons
-void draw_balloon(int moveX, int moveZ,int degree);
-
-// Draws the monsterss
-void draw_monster(int moveX, int moveZ,int degree);
-
-
 #endif /* INCLUDE_DRAW_H_ */

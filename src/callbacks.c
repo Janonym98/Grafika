@@ -5,7 +5,7 @@
 #include "draw.h"
 #include "model.h"
 
-int isHelpOn = 0;
+int help = 0;
 
 int WINDOW_WIDTH;
 int WINDOW_HEIGHT;
@@ -30,7 +30,7 @@ void display(void)
 
 	set_view_point(&camera);
 
-	if (isHelpOn)
+	if (help)
 	{
 		GLfloat torchForHelp[] = {0.8, 0.8, 0.8, 0.8};
 		glLightfv(GL_LIGHT1, GL_AMBIENT, torchForHelp);
@@ -59,18 +59,23 @@ void keyboard(unsigned char key, int x, int y)
 	switch (key)
 	{
 	case 'w':
+	case 'W':
 		action.move_forward = TRUE;
 		break;
 	case 's':
+	case 'S':
 		action.move_backward = TRUE;
 		break;
 	case 'a':
+	case 'A':
 		action.step_left = TRUE;
 		break;
 	case 'd':
+	case 'D':
 		action.step_right = TRUE;
 		break;
 	case 'c':
+	case 'C':
 		action.move_down = TRUE;
 		break;
 	case 32:
@@ -93,18 +98,23 @@ void keyboardUp(unsigned char key, int x, int y)
 	switch (key)
 	{
 	case 'w':
+	case 'W':
 		action.move_forward = FALSE;
 		break;
 	case 's':
+	case 'S':
 		action.move_backward = FALSE;
 		break;
 	case 'a':
+	case 'A':
 		action.step_left = FALSE;
 		break;
 	case 'd':
+	case 'D':
 		action.step_right = FALSE;
 		break;
 	case 'c':
+	case 'C':
 		action.move_down = FALSE;
 		break;
 	case 32:
@@ -117,6 +127,7 @@ void keyboardUp(unsigned char key, int x, int y)
 		action.decrease_light = FALSE;
 		break;
 	case 'h':
+	case 'H':
 		if (move_monster_id == -1)
 		{
 			grab_closest_monster(&world, camera.position);
@@ -127,6 +138,7 @@ void keyboardUp(unsigned char key, int x, int y)
 		}
 		break;
 	case 'f':
+	case 'F':
 		if (move_balloon_id == -1)
 		{
 			grab_closest_balloon(&world, camera.position);
@@ -137,12 +149,14 @@ void keyboardUp(unsigned char key, int x, int y)
 		}
 		break;
 	case 'q':
+	case 'Q':
 		if (move_balloon_id != -1)
 		{
 			world.balloon[move_balloon_id].rotation += 15.0f;
 		}
 		break;
 	case 'e':
+	case 'E':
 		if (move_balloon_id != -1)
 		{
 			world.balloon[move_balloon_id].rotation -= 15.0f;
@@ -158,12 +172,12 @@ void specialFunc(int key, int x, int y)
 	switch (key)
 	{
 	case GLUT_KEY_F1:
-		if (isHelpOn == 1)
+		if (help == 1)
 		{
-			isHelpOn = 0;
+			help = 0;
 		}
 		else
-			isHelpOn = 1;
+			help = 1;
 		break;
 	}
 }
