@@ -21,4 +21,6 @@ Annyit még finomítottam rajta, hogy ha fel vagy le mozgok akkor szintén köve
 
 Mostan beleraktam egy 2d négyzetet amit a "falra" raktam és ráraktam egy ghost textúrát. A probléma ott kezdődik hogy sikerült elérnem hogy mozogjon az x tengely felé, viszont azt nem tudtam megoldani hogy vissza is menjen, így kimegy a házból. :(
 
+Update: most már működik a mozgás :D
+
 A program futtatásához le kell tölteni a repositorym teljes tartalmát, majd a konzolba a következőt kell írni: make && demon
