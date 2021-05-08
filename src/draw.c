@@ -629,13 +629,13 @@ void draw_ghost(Corridor corridor) {
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
 	glBegin(GL_QUADS);
 	glTexCoord2f(0.0, 1.0);
-	glVertex3f(-150+world.w, 0, -299);
+	glVertex3f(-150+165*sin(world.w), 0, -299);
 	glTexCoord2f(1.0, 1.0);
-	glVertex3f(150+world.w, 0, -299);
+	glVertex3f(150+165*sin(world.w), 0, -299);
 	glTexCoord2f(1.0, 0.0);
-	glVertex3f(150+world.w, 300, -299); 
+	glVertex3f(150+165*sin(world.w), 300, -299); 
 	glTexCoord2f(0.0, 0.0);
-	glVertex3f(-150+world.w, 300, -299); 
+	glVertex3f(-150+165*sin(world.w), 300, -299); 
 	glEnd();
 }
 

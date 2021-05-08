@@ -226,7 +226,7 @@ void update_entities(World* world, double time){
 }
 
 void update_ghost(World* world, double time){
-		world->w += 10* time;
+		world->w += 5* time;
 }
 
 void update_camera_position(struct Camera *camera, double elapsed_time)
