@@ -19,4 +19,6 @@ Szekrényben lévő tárgy megfogása/elengedése: H
 Jelen pillanatban eljuttam odáig, hogy beleraktam egy tököt, amit maszkként fel lehet venni... maszkkal a "fejünkön" való mozgás nagyjából megoldottam de elég bugos még (először kattingatni kell a képernyőn hogy jól be legyen pozícionálva, ha megvan a pozíció, akkor abból a pozícióból kell lenyomva tartani az egeret és ilyenkor a tök a kamerával megfelelően mozog, mint egy rendes maszk.... mármint az x tengelyen (jelenleg). Megproóbálom megoldani a rendes maszkviselést, viszont nem ígérek semmit.
 Annyit még finomítottam rajta, hogy ha fel vagy le mozgok akkor szintén követi a tök a mozgást.
 
+Mostan beleraktam egy 2d négyzetet amit a "falra" raktam és ráraktam egy ghost textúrát. A probléma ott kezdődik hogy sikerült elérnem hogy mozogjon az x tengely felé, viszont azt nem tudtam megoldani hogy vissza is menjen, így kimegy a házból. :(
+
 A program futtatásához le kell tölteni a repositorym teljes tartalmát, majd a konzolba a következőt kell írni: make && demon
