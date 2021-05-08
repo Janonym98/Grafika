@@ -25,7 +25,7 @@ typedef struct {
 }Object;
 
 typedef struct {
-    int front, back, left, right, ground, ceiling, horizon, horizon2;
+    int front, back, left, right, ground, ceiling, horizon, horizon2, ghost;
 }Corridor;
 
 typedef struct {
@@ -41,6 +41,8 @@ typedef struct {
     Object balloon[BALLOON_LENGTH];
     Object mask[MASK_LENGTH];
     float rota;
+    float w;
+    float s;
 }World;
 
 World world;
@@ -55,5 +57,8 @@ void init_entities(World* world);
 
 // Update my assigned entities
 void update_entities(World* world, double time);
+
+//Update the mysterious ghost
+void update_ghost(World* world, double time);
 
 #endif // MODEL_H

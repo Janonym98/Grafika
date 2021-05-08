@@ -6,7 +6,6 @@
 #include "model.h"
 
 int help = 0;
-
 int WINDOW_WIDTH;
 int WINDOW_HEIGHT;
 
@@ -21,6 +20,7 @@ void display(void)
 
 	update_camera_position(&camera, elapsed_time);
 	update_entities(&world, elapsed_time);
+	update_ghost(&world, elapsed_time);
 	draw_content(&world);
 
 	glMatrixMode(GL_PROJECTION);
@@ -223,6 +223,10 @@ double calc_elapsed_time()
 
 void update_entities(World* world, double time){
 	world->rota += 100 * time;
+}
+
+void update_ghost(World* world, double time){
+		world->w += 10* time;
 }
 
 void update_camera_position(struct Camera *camera, double elapsed_time)

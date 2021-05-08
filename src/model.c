@@ -80,13 +80,13 @@ void init_entities(World* world) {
 	// Mask
 	load_model(&world->mask[0].model, "obj/pumpkin.obj");
 	world->mask[0].texture = load_texture("tex/pumpkin2.png");
-	init_object(&world->mask[0], 0, -250, 85);
-	world->mask[0].rotation = 0.0f;
+	init_object(&world->mask[0], 30, -250, 85);
+	world->mask[0].rotation = 270.0f;
 
 	// Mask2
 	load_model(&world->mask[1].model, "obj/pumpkin.obj");
 	world->mask[1].texture = load_texture("tex/pumpkin.png");
-	init_object(&world->mask[1], -60, -250, 85);
+	init_object(&world->mask[1], -30, -250, 85);
 	world->mask[1].rotation = 270.0f;
 
 	// Fire
@@ -111,7 +111,7 @@ void init_entities(World* world) {
 	// Schrank
 	load_model(&world->wardrobe.model, "obj/wardrobe.obj");
 	world->wardrobe.texture = load_texture("tex//wardrobe.png");
-	init_object(&world->wardrobe, 0, -240, 25);
+	init_object(&world->wardrobe, 28, -240, 25);
 
 	// devil
 	glPushMatrix();
@@ -136,6 +136,7 @@ void init_entities(World* world) {
 	init_object(&world->door, 0, 265, 0);
 
 	// Corridor
+	world->corridor.ghost = load_texture("tex//ghost.png");
 	world->corridor.horizon = load_texture("tex//hell.png");
 	world->corridor.horizon2 = load_texture("tex//hell2.png");
 	world->corridor.ground = load_texture("tex//ground.png");

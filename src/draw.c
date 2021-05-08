@@ -2,6 +2,7 @@
 #include "model.h"
 #include "callbacks.h"
 #include "camera.h"
+#include "math.h"
 #include <GL/glut.h>
 
 #include <obj/load.h>
@@ -10,6 +11,8 @@
 double corridorWidth = 300;
 double corridorLength = 300;
 double corridorHeight = 300;
+
+
 
 GLfloat material_ambient_default[] = {0.9, 0.9, 0.9, 0.5};
 
@@ -36,9 +39,12 @@ void draw_content(World* world)
 		draw_ceiling(roomToDraw);
 		draw_horizon(roomToDraw);
 		draw_horizon2(roomToDraw);
+		draw_ghost(roomToDraw);
 	glPopMatrix();
 
 	draw_door(0, +28, 0);
+
+
 
 //balloon 1	
 
@@ -616,6 +622,23 @@ void draw_window_wall2(Corridor corridor) {
 	
 }
 
+//Ghost
+void draw_ghost(Corridor corridor) {
+	
+	glBindTexture(GL_TEXTURE_2D, corridor.ghost);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-150+world.w, 0, -299);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(150+world.w, 0, -299);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(150+world.w, 300, -299); 
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-150+world.w, 300, -299); 
+	glEnd();
+}
+
 //horizon
 void draw_horizon(Corridor corridor) {
 	glBindTexture(GL_TEXTURE_2D, corridor.horizon);
@@ -665,6 +688,7 @@ void draw_door(int moveX, int moveZ,int degree) {
 //walls
 void draw_walls(Corridor corridor) {
 
+	//right
 	glBindTexture(GL_TEXTURE_2D, corridor.right);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
 	glBegin(GL_QUADS);
@@ -677,7 +701,8 @@ void draw_walls(Corridor corridor) {
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(-corridorWidth, corridorWidth, -corridorWidth);
 	glEnd();
-
+	
+	//left
 	glBindTexture(GL_TEXTURE_2D, corridor.left);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
 	glBegin(GL_QUADS);
@@ -691,6 +716,8 @@ void draw_walls(Corridor corridor) {
 	glVertex3f(-corridorWidth, 0, corridorWidth);
 	glEnd();
 }
+
+
 
 
 //Help
