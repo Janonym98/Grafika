@@ -2,8 +2,8 @@
 
 ### A program futásához szükséges objektumok és textúrák
 
-[obj.zip](https://1drv.ms/u/s!Aj2LKHg_-iQvhCPx0TKDH-N6vIYO?e=zGmeML)
-[tex.zip](https://1drv.ms/u/s!Aj2LKHg_-iQvhCJppYLIGiPf33zn?e=mEWCKT)
+[tex.zip](https://1drv.ms/u/s!Aj2LKHg_-iQvhCPx0TKDH-N6vIYO?e=zGmeML)
+[obj.zip](https://1drv.ms/u/s!Aj2LKHg_-iQvhCJppYLIGiPf33zn?e=mEWCKT)
 
 
 A kitömörített mappákat az src mellé, a gyökér jegyzékbe kell elhelyezni.
