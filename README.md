@@ -8,7 +8,7 @@
 
 A kitömörített mappákat az src mellé, a gyökér jegyzékbe kell elhelyezni.
 
-### A program futtatásas
+### A program futtatása
 
 Windows és Linux esetén is a konzolba a `make && demon` parancsot kell beírni
 
