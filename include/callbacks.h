@@ -48,4 +48,10 @@ double calc_elapsed_time();
 // Refreshes the position of the camera.
 void update_camera_position(struct Camera* camera, double elapsed_time);
 
+//Grabs the closest pumpkin
+void grab_closest_mask(World *world, Vertex camera_position);
+
+//Grabs the closest balloon
+void grab_closest_balloon(World *world, Vertex camera_position);
+
 #endif /* INCLUDE_CALLBACKS_H_ */

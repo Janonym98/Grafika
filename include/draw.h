@@ -34,6 +34,9 @@ void draw_walls(Corridor corridor);
 // Draws the help menu
 void draw_help(int texture);
 
+//Draws a scary ghost
+void draw_ghost(Corridor corridor);
+
 // Draws the door
 void draw_door(int moveX, int moveZ,int degree);
 
